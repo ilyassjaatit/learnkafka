@@ -1,4 +1,2 @@
 -r base.txt
 
-## faker
-django-faker==0.2
