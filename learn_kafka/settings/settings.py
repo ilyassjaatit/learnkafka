@@ -26,9 +26,8 @@ DEBUG = os.getenv('DEBUG', default=False)
 
 ALLOWED_HOSTS = []
 
-# Application definition
-
-INSTALLED_APPS = [
+# Django apps
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -36,6 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
+]
+
+LOCAL_APPS = []
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,8 +79,12 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB', default='learn_kafka_db'),
+        'USER': os.getenv('POSTGRES_USER', default='learn_kafka_user'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='super_secret_password_learn_kafka'),
+        'HOST': os.getenv('POSTGRES_HOST', default='postgresql'),
+        'PORT': os.getenv('POSTGRES_PORT', default=5432),
     }
 }
 
