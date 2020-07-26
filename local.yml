@@ -1,0 +1,29 @@
+version: '3'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    container_name: django
+    depends_on:
+      - postgresql
+    volumes:
+      - ./learn_kafka:/learn_kafka
+    env_file:
+      - ./.envs/.django
+      - ./.envs/.postgres
+    ports:
+      - "8000:8000"
+    command: /start
+
+  postgresql:
+    image: postgres:12.3-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.envs/.postgres
+
+volumes:
+    postgres_data:
