@@ -331,3 +331,5 @@ learnkafka/media/
 .envs/*
 !.envs/.local/
 
+/learn_kafka/**/migrations/*.py
+!/learn_kafka/**/migrations/__init__.py
