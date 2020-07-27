@@ -1,0 +1,6 @@
+POSTGRES_HOST=postgresql
+POSTGRES_PORT=5432
+POSTGRES_USER=learn_kafka_user
+POSTGRES_PASSWORD=super_secret_password_learn_kafka
+POSTGRES_DB=learn_kafka_db
+DEBUG=True

@@ -1,0 +1,4 @@
+POSTGRES_USER=learn_kafka_db
+POSTGRES_PASSWORD=super_secret_password_learn_kafka
+POSTGRES_DB=learn_kafka_db
+POSTGRES_PORT=5432
