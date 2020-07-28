@@ -10,3 +10,6 @@ djangorestframework==3.11.0
 
 ## kafka
 kafka-python==2.0.1
+
+## pytest
+pytest_django==3.9.0
