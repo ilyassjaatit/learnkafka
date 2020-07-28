@@ -328,7 +328,7 @@ learnkafka/media/
 
 .ipython/
 .env
-.envs/*
+!.envs/*
 !.envs/.local/
 
 # to-do Delete when the project is more advanced

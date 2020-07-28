@@ -7,3 +7,6 @@ django==3.0.8
 
 # django rest framework
 djangorestframework==3.11.0
+
+## kafka
+kafka-python==2.0.1
