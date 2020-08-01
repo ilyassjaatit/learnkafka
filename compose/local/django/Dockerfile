@@ -13,7 +13,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # Requirements are installed here to ensure they will be cached.
-COPY ./requirements /requirements
+COPY ./backend/requirements /requirements
 RUN pip install -r /requirements/local.txt
 
 COPY ./compose/entrypoint /entrypoint
@@ -24,6 +24,6 @@ COPY ./compose/local/django/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
-WORKDIR /learn_kafka
+WORKDIR /backend
 
 ENTRYPOINT ["/entrypoint"]

@@ -332,6 +332,6 @@ learnkafka/media/
 !.envs/.local/
 
 # to-do Delete when the project is more advanced
-/learn_kafka/**/migrations/*.py
-!/learn_kafka/**/migrations/__init__.py
+/backend/**/migrations/*.py
+!/backend/**/migrations/__init__.py
 # end to-do
