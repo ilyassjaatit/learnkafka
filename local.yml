@@ -16,6 +16,19 @@ services:
       - "8000:8000"
     command: /start
 
+  webapp:
+    build:
+      context: .
+      dockerfile: ./compose/local/webapp/Dockerfile
+    depends_on:
+      - django
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./webapp:/webapp
+
+    command: yarn serve -- --port 3000
+
   postgresql:
     image: postgres:12.3-alpine
     ports:
