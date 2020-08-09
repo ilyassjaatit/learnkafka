@@ -7,7 +7,7 @@ import store from './store';
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
-Vue.use(NavbarPlugin)
+Vue.use(NavbarPlugin);
 Vue.use(IconsPlugin);
 
 new Vue({
