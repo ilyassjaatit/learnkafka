@@ -4,5 +4,3 @@ RUN apk add yarn
 RUN yarn global add @vue/cli
 
 WORKDIR webapp
-
-yarn serve
