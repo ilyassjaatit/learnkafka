@@ -6,7 +6,7 @@ psycopg2==2.8.5 --no-binary psycopg2
 django==3.0.8
 
 # django rest framework
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 
 ## kafka
 kafka-python==2.0.1
